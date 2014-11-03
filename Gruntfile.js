@@ -32,8 +32,8 @@ module.exports = function (grunt) {
             }
         },
 
-        compass: {                  
-            dev: {                    
+        compass: {
+            dev: {
                 options: {
                     sassDir: 'sass',
                     cssDir: 'assets/css',
@@ -44,13 +44,13 @@ module.exports = function (grunt) {
             }
         }
     });
-    
+
     // Load tasks
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-compass');
-    
+
     // Register Production
     grunt.registerTask('default', ['compass:dev','watch']);
-    
+
 
 };

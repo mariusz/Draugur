@@ -1,21 +1,28 @@
     {{!< default}}
     <header class="site-header cover" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
+        <nav role="navigation" class="top-navigation">
+          <ul>
+            <li><a href="http://lifetramp.com" class="button">Sign up for Lifetramp</a></li>
+          </ul>
+        </nav>
+
         <section class="header-content">
+            {{#if @blog.logo}}<a href="/"><img src="{{@blog.logo}}" alt="{{@blog.title}}"></a>{{/if}}
             <a itemprop="name url" class="blog-title" href="/">{{@blog.title}}</a>
             <span itemprop="description" class="blog-description">{{@blog.description}}</span>
-            {{> links}}
         </section>
     </header>
-    
+
     <main id="main" class="index" role="main">
         {{#foreach posts ~}}
         <article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting" class="{{post_class}}">
-            <header class="meta">
+            <header class="meta {{#if image}}meta--image{{/if}}" {{#if image}}style="background-image: url({{ image }})"{{/if}}>
                 <h1 class="post-title" itemprop="name headline"><a href="{{url}}"  itemprop="url">{{{title}}}</a></h1>
                 <span class="post-data"><time class="timesince date" itemprop="datePublished" datetime="{{date format='YYYY-MM-DDTHH:mm'}}" title="{{date format='D MMM YYYY'}}" data-timesince="{{date format='X'}}">{{date format='D MMM YYYY'}}</time> <span itemprop="keywords" class="tags">{{tags prefix="in " separator=", "}}</span></span>
             </header>
-            <section class="post-content" itemprop="articleBody text">{{content}}</section>
+            <section class="post-content" itemprop="articleBody text">{{{excerpt}}}</section>
+            <section class="post-actions"><a href="{{url}}" class="button">Read entire post</a></section>
         </article>
         {{~/foreach}}
-        {{pagination}}        
+        {{pagination}}
     </main>

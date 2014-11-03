@@ -3,16 +3,16 @@
 @include global-reset;
 @import 'mixins';
 
-$white: #fff;
+$white: #fafafa;
 $lighter-grey: #f7f7f7;
 $light-grey: #D3D3D3;
 $grey: #A2A2A2;
 $dark-grey: #333;
-$black: #000;
-$blue: #4183c4;
+$black: #51463f;
+$blue: ##9ab531;
 
-$font: Open Sans, Helvetica, sans-serif;
-$font-header: Rambla, sans-serif;
+$font: 'ff-tisa-web-pro', 'Tisa Web Pro', Georgia, serif;
+$font-header: 'freight-sans-pro', 'Freight Sans Pro', sans-serif;
 $font-code: Source Code Pro, monospace;
 $font-color: $dark-grey;
 

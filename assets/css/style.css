@@ -517,15 +517,12 @@ header.site-header nav.links li {
     display: inline-block;
 }
 header.site-header nav.links ul {
-    line-height: 64px;
     margin: 0;
 }
 header.site-header nav.links ul li {
     margin: 0;
 }
 header.site-header nav.links a {
-    text-decoration: none;
-    color: #333;
     -webkit-transition: 200ms;
     -moz-transition: 200ms;
     -o-transition: 200ms;
@@ -816,18 +813,25 @@ main.index article.post header.meta--image span.post-data .tags a {
   display: inline-block;
   font-size: 16px;
   font-size: 1rem;
-  padding: 10px 20px;
-  padding: .625rem 1.25rem;
+  padding: 8px 20px;
+  padding: .5rem 1.25rem;
   border-radius: 3px;
   color: white;
   text-decoration: none;
   word-wrap: nowrap;
   background: #9ab531;
   border-color: #9ab531;
+  font-family: "freight-sans-pro", "Freight Sans Pro", sans-serif;
+  font-weight: 700;
   -webkit-transition: all .2s ease;
   -moz-transition: all .2s ease;
   -ms-transition: all .2s ease;
   transition: all .2s ease;
+}
+
+.button:hover {
+  color: white;
+  background: #a1c125;
 }
 
 .top-navigation .button {

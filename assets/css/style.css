@@ -682,9 +682,6 @@ header.site-header.cover nav.links {
 main {
     padding: 2em;
 }
-main h1.post-title, main h1.page-title {
-    width: 110%;
-    margin-left: -5%}
 main.index article.post {
     margin: 2em 0;
 }
@@ -714,10 +711,6 @@ main {
 }
 main.index article.post {
     margin: 3em 0;
-}
-main h1.post-title, main h1.page-title {
-    width: 150%;
-    margin-left: -25%}
 }
 
 .footer__links {
